@@ -1,0 +1,169 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Контейнер для сотрудников */
+#employee-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Фильтры */
+#filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#filters input[type="text"],
+#filters select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+    margin-right: 10px;
+}
+
+#filters button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#filters button:hover {
+    background-color: #0056b3;
+}
+
+/* Кнопка добавления сотрудника */
+#addEmployeeBtn {
+    display: block;
+    margin: 0 auto 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#addEmployeeBtn:hover {
+    background-color: #218838;
+}
+
+/* Форма добавления/редактирования сотрудника */
+#addEmployeeForm {
+    margin-bottom: 20px;
+    padding: 20px;
+    padding-right: 30px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+#addEmployeeForm input,
+#addEmployeeForm textarea,
+#addEmployeeForm select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Кнопки в форме */
+#addEmployeeForm button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#addEmployeeForm button:hover {
+    background-color: #0056b3;
+}
+
+/* Таблица сотрудников */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Статусы */
+table td:nth-child(10) {
+    font-weight: bold;
+}
+
+/* Стили для кнопок */
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Эффект при наведении на кнопку */
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Стили для кнопок "Редактировать" и "Уволить" */
+button.edit-button {
+    background-color: #28a745;
+}
+
+button.edit-button:hover {
+    background-color: #218838;
+}
+
+button.fire-button {
+    background-color: #dc3545;
+}
+
+button.fire-button:hover {
+    background-color: #860212;
+}
+
+button + button {
+    margin-left: 10px;
+}
+

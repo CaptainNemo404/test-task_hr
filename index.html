@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учет сотрудников</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="employee-container">
+        <h1>Учет сотрудников</h1>
+        <div id="filters">
+            <input type="text" id="searchName" placeholder="Поиск по ФИО">
+            <select id="departmentFilter">
+                <option value="">Отдел</option>
+            </select>
+            <select id="positionFilter">
+                <option value="">Должность</option>
+            </select>
+            <button onclick="filterEmployees()">Применить фильтры</button>
+        </div>
+        <button id="addEmployeeBtn" onclick="showAddEmployeeForm()">Добавить нового сотрудника</button>
+        <div id="addEmployeeForm" style="display: none;">
+            <h2 id="formTitle">Добавить нового сотрудника</h2>
+            <form id="employeeForm">
+                <input type="hidden" id="employeeID">
+                <input type="text" id="fullName" placeholder="ФИО" required>
+                <input type="date" id="birthDate" placeholder="Дата рождения" required>
+                <input type="text" id="passportNumber" placeholder="Паспорт" required>
+                <input type="text" id="contactInfo" placeholder="Контакты" required>
+                <textarea id="address" placeholder="Адрес" required></textarea>
+                <input type="number" id="salary" placeholder="Зарплата" required>
+                <input type="date" id="hireDate" placeholder="Дата найма" required>
+                <select id="departmentID" required>
+                    <option value="">Выберите отдел</option>
+                </select>
+                <select id="positionID" required>
+                    <option value="">Выберите должность</option>
+                </select>
+                <button type="submit">Сохранить</button>
+                <button type="button" onclick="hideAddEmployeeForm()">Отмена</button>
+            </form>
+        </div>
+
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th>ФИО</th>
+                    <th>Дата рождения</th>
+                    <th>Паспорт</th>
+                    <th>Контакты</th>
+                    <th>Адрес</th>
+                    <th>Отдел</th>
+                    <th>Должность</th>
+                    <th>Зарплата</th>
+                    <th>Дата найма</th>
+                    <th>Статус</th>
+                    <th>Действия</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
